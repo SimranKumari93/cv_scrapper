@@ -11,13 +11,7 @@ def extract_text_from_pdf(pdf_file):
         for page in pdf_reader.pages:
             text += page.extract_text()
     return text 
-def extract_text_from_pdf(pdf_file):
-    with open(pdf_file, 'rb') as file:
-        pdf_reader = PyPDF2.PdfReader(file)
-        text = ""
-        for page in pdf_reader.pages:
-            text += page.extract_text()
-    return text 
+
 
 def extract_text_from_docx(docx_file):
     doc = docx.Document(docx_file)
